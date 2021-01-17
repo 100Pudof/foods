@@ -12,7 +12,7 @@ import React from 'react'
             <div className="categories">
               <ul className="ul">
                 <li className={activeCategory == null ? 'active' : ''}
-                onClick={() => changeActive(null)}>Все</li>
+                onClick={() => changeActive(null)}> Все</li>
                 {items &&
                   items.map((name, index) => 
                   <li 

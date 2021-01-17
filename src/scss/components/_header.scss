@@ -3,7 +3,7 @@
 .header {
   // border-bottom: 1px solid $gray-line;
   padding: 15px 0;
-  background-color: #323036;
+  background-color: #babac2;
   width: 90%;
   margin: 0 auto;
   border-radius: 10px;
@@ -20,9 +20,11 @@
 
   &__logo {
     display: flex;
+    
 
     img {
       margin-right: 15px;
+      border-radius: 30px;
     }
 
     h1 {

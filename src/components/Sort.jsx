@@ -23,7 +23,7 @@ const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, 
     }
     
     const handleOutsideClick = (e) => {
-        if (!e.path.includes(sortRef.current)) { // если клик вне попапа, он закрывается. 
+        if (!e.path.includes(sortRef.current)) { // если клик вне попапа, он закрывается. ;
             setvisiblePopup(false);
         }
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import moduleName from '../assets/img/pizza-logo.svg';
+import moduleName from '../assets/img/food-logo.png';
 import  Button  from './Button';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -14,10 +14,10 @@ const Header = function() {
             <div className="container">
                 <Link to="/">
                     <div className="header__logo">
-                        <img width="38" src={moduleName} alt="Pizza logo" />
+                        <img width="60" src={moduleName} alt="Pizza logo" />
                         <div>
                             <h1>React food</h1>
-                            <p>Для вашего удовольствия </p>
+                            <p>Для вашего удовольствия  </p>
                         </div>
                     </div>
                 </Link>
