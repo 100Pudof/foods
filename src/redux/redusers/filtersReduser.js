@@ -13,18 +13,23 @@ const filters = (state = initialState, action) => {
             return {
                 ...state,
                 sortBy: action.payload
-            }
+            };
+
             case 'SET_CATEGORY':
                 return {
                     ...state,
                     category: action.payload
-                }
+                };
+                
             case 'SET_SIZE':
                 return {
                     ...state,
                     size: action.payload
-                }
+                };
+
+            default: return state;
     }
-    return state;
+    
+    
 }
 export default filters;

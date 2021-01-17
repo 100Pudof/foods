@@ -1,5 +1,5 @@
 import {createStore, combineReducers, compose, applyMiddleware } from 'redux'
-import pizzasReduser from './redusers/pizzasReduser';
+import itemsReduser from './redusers/pizzasReduser';
 import filtersReduser from './redusers/filtersReduser';
 import categoryReduser from './redusers/CategoryReduser';
 import cartReduserCopy from './redusers/cartReduserCopy';
@@ -10,7 +10,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
     filters: filtersReduser,
-    items: pizzasReduser,
+    items: itemsReduser,
     category: categoryReduser,
     cart: cartReduserCopy,
 })

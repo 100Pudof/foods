@@ -1,4 +1,4 @@
-import produce from "immer";
+
 
 const initialState = {
     items: {},
@@ -104,7 +104,13 @@ const cart = (state = initialState, action) => {
 
 
 
-        // produce(initialState, draft => {
+        
+        default:
+            return state;
+    }
+}
+
+// produce(initialState, draft => {
         //     draft.items += Object.assign( {}, action.payload);
         //     draft.totalPrice += action.payload.price;
         //     draft.totalCount = draft.items.length;
@@ -112,20 +118,6 @@ const cart = (state = initialState, action) => {
         //     // const getTotalPrice = arr => arr.reduce((sum, obj) => obj.price + sum, 0)
         //     // oldPrice.reduce((sum, obj) => action.payload.price + sum, 0);
         // })
-        default:
-            return state;
-    }
-}
-// const cart = produce((draft, action) => {
-//     switch (action.type) {
-//         case 'ADD_PIZZA_CART':
-//             draft.items.push(action)
-//             action.products.forEach(product => {
-//                 draft[product.id] = product
-//             })
-//     }
-// }, {})
-
 
 
 export default cart;
