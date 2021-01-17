@@ -3,13 +3,13 @@ import React from 'react'
 import classNames from 'classnames';
 import Button from './../Button';
 
-function PizzaBlock({ id, name, imageUrl, types, sizes, price, onClickAddPizza, categoryTypes, addedCount }) {
+function PizzaBlock({ id, name, imageUrl, types, price, onClickAddPizza, categoryTypes, addedCount }) {
     const [activeType, setActiveType] = React.useState(types[0]); // указываем (types[0]) что-бы выделялся оставшийся type, если второго нет.
     const [activePrice, setActivePrice] = React.useState(0);
 
     
     const onSelectType = (index) => {
-        setActiveType(index);
+        setActiveType(types[index]);
         setActivePrice(index);
     }
     const addPizzaToCart = () => {
@@ -49,8 +49,8 @@ function PizzaBlock({ id, name, imageUrl, types, sizes, price, onClickAddPizza, 
                                 onClick={() => onSelectType(index)}
                                 key={index}
                                 className={classNames({
-                                    'active': activeType === type,
-                                    'disable': !types.includes(type),
+                                    active: activeType === type,
+                                    disable: !types.includes(type),
                                 })}>
                                 {type}
                             </li>
