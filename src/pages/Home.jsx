@@ -2,12 +2,10 @@ import React from 'react'
 import { Categories, Sort, PizzaBlock } from '../components';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory } from '../redux/action/filters';
-import { fetchPizzas } from '../redux/action/pizzas';
+import { fetchAllItems } from '../redux/action/pizzas';
 import LoadingBlock from '../components/PizzaBlock/LoadingBlock';
-import { setSortBy, setSize } from './../redux/action/filters';
-
-
-// import Test from './test'
+import { setSortBy } from './../redux/action/filters';
+import { addToCart } from './../redux/action/cart';
 
 
 const sortItems = [
@@ -16,42 +14,41 @@ const sortItems = [
   { name: 'алфавит', type: 'name', order: 'asc' }
 ];
 
-function Home() {
-  // const {items} = useSelector( ({pizzas}) => { // вытащить из useSelector только {items}
+const  Home = React.memo(() => {
+  // const {items} = useSelector( ({cart}) => { // вытащить из useSelector только {items}
   // return {
-  //   items: pizzas.items,
+  //   items: cart.items,
   // };
-  // альтернативный вариант const items = useSelector( ({pizzas}) =>  pizzas.items);
-  // const cartItems = useSelector(({ cart }) => cart.items)
+  // альтернативный вариант const items = useSelector( ({cart}) =>  cart.items);
+
   const dispatch = useDispatch();
   const categoryName = useSelector(({ category }) => category.categoryName)
-  const items = useSelector(({ pizzas }) => pizzas.items)
-  const isLoaded = useSelector(({ pizzas }) => pizzas.isLoaded)
+  const items = useSelector(({ items }) => items.items)
+  const isLoaded = useSelector(({ items }) => items.isLoaded)
   const category = useSelector(({ filters }) => filters.category);
   const sortBy = useSelector(({ filters }) => filters.sortBy)
 
-  React.useEffect(() => {
-    dispatch(fetchPizzas(sortBy, category));
-  }, [sortBy, category, dispatch])
+ 
 
-  const setCategoryIndex = (index) => {
+  const setCategoryIndex = React.useCallback((index) => {
     dispatch(setCategory(index));
-  };
+  }, [dispatch]);
 
-  const onSelectSortType = (type) => {
+  const onSelectSortType = React.useCallback((type) => {
     dispatch(setSortBy(type));
-    dispatch(setSize(type))
-  };
-  const onSelectSize = (size) => {
-    dispatch(setSize(size))
-  };
-  const handleAddPizzaToCart = (pizzaObj) => {
-    dispatch(({
-      type: 'ADD_PIZZA_CART',
-      payload: pizzaObj
-    }))
-  }
+  }, [dispatch]);
 
+  // const onSelectSize = React.useCallback((size) => {
+  //   dispatch(setSize(size))
+  // }, [dispatch]);
+
+  const handleAddToCart = React.useCallback((obj) => {
+    dispatch(addToCart(obj));
+  }, [dispatch]);
+
+ React.useEffect(() => {
+    dispatch(fetchAllItems(sortBy, category));
+  }, [sortBy, category, dispatch]);
   return (
     <div>
 
@@ -66,14 +63,14 @@ function Home() {
             items={sortItems}
             activeSortType={sortBy.type}
             onClickSortType={onSelectSortType}
-            onClickSize={onSelectSize} />
+             />
         </div>
         <h2 className="content__title">{category != null ? categoryName[category] : 'Все'}</h2>
         <div className="content__items">
           {isLoaded
             ? items.map((elem) => (
               <PizzaBlock
-                onClickAddPizza={handleAddPizzaToCart}
+                onClickAdd={handleAddToCart}
                 key={elem.id}
                 {...elem}
                 categoryTypes={elem.types}
@@ -88,5 +85,6 @@ function Home() {
     </div>
   )
 }
+);
 
 export default Home

@@ -3,7 +3,7 @@ import React from 'react'
 import classNames from 'classnames';
 import Button from './../Button';
 
-function PizzaBlock({ id, name, imageUrl, types, price, onClickAddPizza, categoryTypes, addedCount }) {
+const PizzaBlock = React.memo(({ id, name, imageUrl, types, price, onClickAdd, categoryTypes, addedCount }) => {
     const [activeType, setActiveType] = React.useState(types[0]); // указываем (types[0]) что-бы выделялся оставшийся type, если второго нет.
     const [activePrice, setActivePrice] = React.useState(0);
 
@@ -12,17 +12,17 @@ function PizzaBlock({ id, name, imageUrl, types, price, onClickAddPizza, categor
         setActiveType(types[index]);
         setActivePrice(index);
     }
-    const addPizzaToCart = () => {
-        const obj = {
+    const addToCart = () => {
+        let obj = {
             id,
             price: price[activePrice],
             name,
             imageUrl,
-            // size: availableSize[activeSize],
+            typesCart: types[activePrice],
              type: categoryTypes[activeType],
         };
-        onClickAddPizza(obj);
         
+        onClickAdd(obj);
         
     }
     // const [activeSize, setActiveSize] = React.useState(0);
@@ -74,9 +74,8 @@ function PizzaBlock({ id, name, imageUrl, types, price, onClickAddPizza, categor
                 </div>
                 <div className="pizza-block__bottom">
                     <div className="pizza-block__price"> {price[activePrice]} ₽</div>
-                    <Button onClick={addPizzaToCart} className='button--add' outline >
+                    <Button onClick={addToCart} className='button--add' outline >
                         <svg
-                            onClick={() => onClickAddPizza()}
                             width="12"
                             height="12"
                             viewBox="0 0 12 12"
@@ -96,6 +95,7 @@ function PizzaBlock({ id, name, imageUrl, types, price, onClickAddPizza, categor
         </div>
     )
 }
+);
 
 
 

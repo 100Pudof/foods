@@ -10,10 +10,10 @@ const setPizzas = (items) => ({
     payload: items,
  })
  
-export const fetchPizzas = (sortBy, category) => (dispatch) => {
+export const fetchAllItems = (sortBy, category) => (dispatch) => {
     dispatch(setLoaded(false))
 
-    axios.get(`/pizzas?${category !== null ? `category=${category}` : ''
+    axios.get(`/all?${category !== null ? `category=${category}` : ''
     }&_sort=${sortBy.type}&_order=asc`)
     .then( ({data}) => {
      dispatch(setPizzas(data));

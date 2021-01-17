@@ -10,7 +10,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
     filters: filtersReduser,
-    pizzas: pizzasReduser,
+    items: pizzasReduser,
     category: categoryReduser,
     cart: cartReduserCopy,
 })

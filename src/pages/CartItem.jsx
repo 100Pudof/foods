@@ -1,9 +1,9 @@
 import React from 'react'
 
 function CartItem({
-  name, size, type,
+  name, typesCart,
   totalCount, onRemove, id, onPlus,
-  onMinus, test, imageUrl, object, groupId }) {
+  onMinus, imageUrl, object, groupId }) {
 
    const prise = object.reduce((sum, obj) => obj.price + sum, 0);
   const handleRemoveClick = () => {
@@ -27,8 +27,9 @@ function CartItem({
       </div>
       <div className="cart__item-info">
         <h3>{name}</h3>
-        <p>{type} тесто, {size} см. {test} </p>
+        <p> {typesCart} </p>
       </div>
+      
       <div className="cart__item-count">
         <div onClick={handleMinusItem} className="button button--outline button--circle cart__item-count-minus">
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +59,7 @@ function CartItem({
 
         </div>
       </div>
+      
     </div>
   )
 }

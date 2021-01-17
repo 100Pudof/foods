@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {useCallback} from 'react'
 import CartItem from './CartItem';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearPizza, removeCartItem, plusItem, minusItem } from '../redux/action/cart';
+import { clearCart, removeCartItem, plusItem, minusItem } from '../redux/action/cart';
 import emptyCart from '../assets/img/empty-cart.png'
 import { Link } from 'react-router-dom';
 import Button from './../components/Button';
 
-function Cart() {
+const  Cart = React.memo(() => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.items);
   const totalCount = useSelector((state) => state.cart.totalCount);
@@ -17,26 +17,29 @@ function Cart() {
   
   //const test = Object.values(Object.keys(items)).map((obj, index) => <CartItem key={index} {...obj} />)
 
-  const onClearPizza = () => {
+  const onClearCart = useCallback(() => {
     if (window.confirm('Вы действительно хотите очистить корзину?')) {
-      dispatch(clearPizza())
+      dispatch(clearCart())
     }
-  }
+  }, [dispatch]);
 
-  const onRemoveItem = (id) => {
+  const onRemoveItem = useCallback((id) => {
     if (window.confirm('Вы хотите удалить элемент? ')) {
       dispatch(removeCartItem(id))
     }
-  }
+  }, [dispatch]);
 
-  const onPlusItem = (id) => {
+  const onPlusItem = useCallback((id) => {
     dispatch(plusItem(id))
-  }
-  const onMinusItem = (id) => {
+  }, [dispatch]);
+
+  const onMinusItem = useCallback((id) => {
     dispatch(minusItem(id))
+  }, [dispatch]);
+
+  const buy = () => {
+    alert("that's all");
   }
-
-
   return (
     <div>
       { totalPrice ? <div className="content">
@@ -57,7 +60,7 @@ function Cart() {
                   <path d="M11.6666 9.16667V14.1667" stroke="#B6B6B6" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
 
-                <span onClick={onClearPizza}>Очистить корзину</span>
+                <span onClick={onClearCart}>Очистить корзину</span>
               </div>
             </div>
             <div className="content__items">
@@ -78,7 +81,7 @@ function Cart() {
             </div>
             <div className="cart__bottom">
               <div className="cart__bottom-details">
-                <span> Всего пицц: <b>{totalCount} шт.</b> </span>
+                <span> Количество : <b>{totalCount} шт.</b> </span>
                 <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
               </div>
               <div className="cart__bottom-buttons">
@@ -90,7 +93,7 @@ function Cart() {
                     <span>Вернуться назад</span>
                   </Link>
                 </a>
-                <Button className="pay-btn">
+                <Button onClick={() => buy()} className="pay-btn">
                   <span>Оплатить сейчас</span>
                 </Button>
               </div>
@@ -102,8 +105,7 @@ function Cart() {
         <div className="cart cart--empty">
           <h2>Корзина пустая 😕 </h2>
           <p>
-            Вероятней всего, вы не заказывали ещё пиццу.<br />
-              Для того, чтобы заказать пиццу, перейди на главную страницу.
+              Для того, чтобы заказать, перейди на главную страницу.
             </p>
           <img src={emptyCart} alt="Empty cart" />
 
@@ -117,5 +119,6 @@ function Cart() {
     </div>
   )
 }
+);
 
 export default Cart

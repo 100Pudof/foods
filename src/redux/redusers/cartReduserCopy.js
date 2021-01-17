@@ -12,13 +12,13 @@ const getArr = (obj) => {
 const getTotalPrice = (arr) => arr.reduce((sum, obj) => obj.price + sum, 0)
 const cart = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_PIZZA_CART': {
-            const id = action.payload.id + '_' + action.payload.price;
+        case 'ADD_ITEM_CART': {
+            let id = action.payload.id + '_' + action.payload.price;
             const newItems = {
                 ...state.items,
-                [id]: !state.items[id]  ?
-                    [action.payload] :
-                    [...state.items[id], action.payload],
+                [id]: !state.items[id]  
+                ? [action.payload] 
+                : [...state.items[id], action.payload],
             };
 
 
