@@ -1,0 +1,193 @@
+{
+    "pizzas": [ 
+      {
+        "id": 1,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/320972286_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Соус соевый",
+        "types": ["40 г","80 г"],
+        "price": [30, 50],
+        "category": 4,
+        "rating": 2
+      },
+      {
+        "id": 2,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/320972287_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Соус ореховый",
+        "types": ["40 г","80 г"],
+        "price": [30, 50],
+        "category": 4,
+        "rating": 2
+      },
+      {
+        "id": 3,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/320972285_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Соус белый",
+        "types": ["40 г","80 г"],
+        "price": [30, 50],
+        "category": 4,
+        "rating": 6
+      },
+      {
+        "id": 4,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/312493347_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Газ.Напиток 7ап",
+        "types": ["0.5 л.","1 л."],
+        "price": [80, 150],
+        "category": 3,
+        "rating": 5
+      },
+      {
+        "id": 5,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/312493345_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Аква минерале(газ)",
+        "types": ["0.5 л.","1 л."],
+        "price": [60, 110],
+        "category": 3,
+        "rating": 6
+      },
+      {
+        "id": 6,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/312493344_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Аква минерале(без газа)",
+        "types": ["0.5 л.","1 л."],
+        "price": [60, 110],
+        "category": 3,
+        "rating": 3
+      },
+      {
+        "id": 7,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/312493363_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Десерт наслаждение",
+        "types": ["170 грамм"],
+        "price": [165],
+        "category": 2,
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/312493362_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Десерт тутти фрутти",
+        "types": ["170 грамм"],
+        "price": [165],
+        "category": 2,
+        "rating": 4
+      },
+      {
+        "id": 27,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/15889/316087565_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Брауни с карамелью",
+        "types": ["105 грамм"],
+        "price": [189],
+        "category": 2,
+        "rating": 5
+      },
+      {
+        "id": 28,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/15889/316087576_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Маффин шоколадный",
+        "types": ["120 грамм"],
+        "price": [190],
+        "category": 2,
+        "rating": 5
+      },
+      {
+        "id": 9,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/322825096_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Салат в  маринаде",
+        "types": ["105 грамм","210 грамм"],
+        "price": [175, 250],
+        "category": 1,
+        "rating": 6
+      },
+      {
+        "id": 29,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/322825096_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Салат греческий",
+        "types": ["105 грамм","210 грамм"],
+        "price": [175, 250],
+        "category": 1,
+        "rating": 6
+      },
+      {
+        "id": 10,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/322825095_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Салат с ореховым соусом",
+        "types": ["105 грамм","210 грамм"],
+        "price": [175, 250],
+        "category": 1,
+        "rating": 7
+      },
+      {
+        "id": 11,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/312493353_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Салат цезарь с курицей",
+        "types": ["105 грамм","210 грамм"],
+        "price": [135, 210],
+        "category": 1,
+        "rating": 5
+      },
+      {
+        "id": 12,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/322825101_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Нихао комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [365, 399],
+        "category": 0,
+        "rating": 7
+      },
+      {
+        "id": 13,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/322834329_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Фитнес комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [335, 400],
+        "category": 0,
+        "rating": 7
+      },
+      {
+        "id": 14,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/322870277_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Море комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [265, 300],
+        "category": 0,
+        "rating": 7
+      },
+      {
+        "id": 15,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/320081472_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Яркое комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [255, 290],
+        "category": 0,
+        "rating": 7
+      },
+      {
+        "id": 16,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/320029529_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Сумо комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [255, 280],
+        "category": 0,
+        "rating": 5
+      },
+      {
+        "id": 17,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/321070027_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Бэнто комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [245, 280],
+        "category": 0,
+        "rating": 5
+      },
+      {
+        "id": 18,
+        "imageUrl": "https://www.delivery-club.ru/media/cms/relation_product/32495/321070026_m650.jpg?resize=fit&width=650&height=272&gravity=ce&out=webp",
+        "name": "Баланс комбо",
+        "types": ["Обычный", "Запеченый" ],
+        "price": [255, 275],
+        "category": 0,
+        "rating": 7
+      }
+    ]
+  }
