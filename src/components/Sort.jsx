@@ -11,7 +11,6 @@ const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, 
     const popupSelect = (index) => {
         if (onClickSortType) {
             onClickSortType(index);
-            onClickSize(index)
 
         }
         setvisiblePopup(false);
@@ -73,12 +72,5 @@ const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, 
         </div>
     )
 })
-Sort.propTypes = {
-    activeSortType: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.object).isRequired,
-    onClickSortType: PropTypes.func.isRequired,
-};
-Sort.defaultProps = {
-    items: [],
-};
+
 export default Sort
