@@ -58,18 +58,7 @@ const PizzaBlock = React.memo(({ id, name, imageUrl, types, price, onClickAdd, c
                         }
                     </ul>
                     <ul>
-                        {/* {availableSize.map((size, index) => (
-                            <li
-                                onClick={() => onSelectsize(index)}
-                                key={index}
-                                className={classNames({
-                                    'active': activeSize === index,
-                                    'disable': !sizes.includes(size),
-                                })}>
-                                {size} см.
-                            </li>
-                        ))
-                        } */}
+                        
                     </ul>
                 </div>
                 <div className="pizza-block__bottom">

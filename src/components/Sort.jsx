@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types';
+import React from 'react';
 
 const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, onClickSize }) {
     const [visiblePopup, setvisiblePopup] = React.useState(false);
