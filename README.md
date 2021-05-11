@@ -1,3 +1,3 @@
-email: study.andrverh@mail.ru
+email: study.andrverh@mail.ru <br>
 phone: +79315328784 <br>
 (загрузка страницы возможна долгая, т.к. размещение бесплатное)
