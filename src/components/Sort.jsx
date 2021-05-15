@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types';
+import React from 'react';
 
-const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, onClickSize }) {
+const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType}) {
     const [visiblePopup, setvisiblePopup] = React.useState(false);
     const [flugSvg, setflugSvg] = React.useState(true);
-    // const [popupIndex, setPopupIndex] = React.useState(0);
-    const activeLabel = items.find((obj) => obj.type === activeSortType).name; // находит обьект, тип которого аналогичен приходящему из пропсов activeSortType, и выводит его имя. 
+    const activeLabel = items.find((obj) => obj.type === activeSortType).name;
+     // находит обьект, тип которого аналогичен приходящему из пропсов activeSortType, и выводит его имя. 
     const sortRef = React.useRef(); // хранение ссылки на дом элемент, попап sort
 
-    const popupSelect = (index) => {
+    const popupSelect = (obj) => {
         if (onClickSortType) {
-            onClickSortType(index);
+            onClickSortType(obj);
 
         }
+        
         setvisiblePopup(false);
     }
 
@@ -32,7 +32,6 @@ const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, 
     }, []); // обработчик события на боди. 
 
     return (
-        <div>
             <div
                 ref={sortRef}
                 className="sort">
@@ -69,7 +68,6 @@ const Sort = React.memo(function Sort({ items, activeSortType, onClickSortType, 
                     </div>
                 }
             </div>
-        </div>
     )
 })
 

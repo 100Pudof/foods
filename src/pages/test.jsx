@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// попытка при клике на "оплату", отправлять на почту объект со всеми данными из корзины
 export default class extends React.Component {
   constructor(props) {
 	super(props);
