@@ -21,6 +21,10 @@ const PizzaBlock = React.memo(({ id, name, imageUrl, types, price, onClickAdd, c
             typeCart: types[activePrice]
         };
         onClickAdd(obj);
+<<<<<<< HEAD
+=======
+        console.log(obj)
+>>>>>>> da656345f23ff9720f40d0db154c690a87701cdd
     }
     
     return (
