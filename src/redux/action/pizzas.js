@@ -17,9 +17,10 @@ export const fetchAllItems = (sortBy, category) => (dispatch) => {
     .then( ({data}) => {
      dispatch(setPizzas(data));
     })
+    
 }
 
-
+// ?`category=2``&_sort=price``&_order=asc`
 
 
  export default setPizzas;

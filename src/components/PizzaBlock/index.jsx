@@ -18,21 +18,12 @@ const PizzaBlock = React.memo(({ id, name, imageUrl, types, price, onClickAdd, c
             price: price[activePrice],
             name,
             imageUrl,
-            typesCart: types[activePrice],
-             type: categoryTypes[activeType],
+            typeCart: types[activePrice]
         };
-        
         onClickAdd(obj);
-        
+        console.log(obj)
     }
-    // const [activeSize, setActiveSize] = React.useState(0);
-    // const availableSize = [26, 30, 40];
-    // const onSelectsize = (index) => {
-    //     setActiveSize(index);
-    // }
-    // if(!sizes.includes(categoryTypes)) {
-    //     setActiveSize(activeSize + 1)
-    // }
+    
     return (
         <div>
             <div className="pizza-block">
@@ -57,13 +48,14 @@ const PizzaBlock = React.memo(({ id, name, imageUrl, types, price, onClickAdd, c
                         ))
                         }
                     </ul>
-                    <ul>
-                        
-                    </ul>
                 </div>
+                
                 <div className="pizza-block__bottom">
                     <div className="pizza-block__price"> {price[activePrice]} ₽</div>
-                    <Button onClick={addToCart} className='button--add' outline >
+                    <Button 
+                    onClick={addToCart} 
+                    className='button--add' 
+                    outline >
                         <svg
                             width="12"
                             height="12"
@@ -77,7 +69,7 @@ const PizzaBlock = React.memo(({ id, name, imageUrl, types, price, onClickAdd, c
                             />
                         </svg>
                         <span>Добавить</span>
-                        {addedCount && <i>{addedCount}</i>}
+                        {/* {addedCount && <i>{addedCount}</i>} */}
                     </Button>
                 </div>
             </div>

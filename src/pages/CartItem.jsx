@@ -1,7 +1,7 @@
 import React from 'react'
 
 function CartItem({
-  name, typesCart,
+  name, typeCart,
   totalCount, onRemove, id, onPlus,
   onMinus, imageUrl, object, groupId }) {
 
@@ -27,7 +27,7 @@ function CartItem({
       </div>
       <div className="cart__item-info">
         <h3>{name}</h3>
-        <p> {typesCart} </p>
+        <p> {typeCart} </p>
       </div>
       
       <div className="cart__item-count">

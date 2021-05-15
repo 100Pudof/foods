@@ -7,9 +7,9 @@ const initialState = {
 }
 const getArr = (obj) => {
     return [].concat.apply([], Object.values(obj));
-};
-
+}
 const getTotalPrice = (arr) => arr.reduce((sum, obj) => obj.price + sum, 0)
+
 const cart = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_ITEM_CART': {
@@ -21,38 +21,27 @@ const cart = (state = initialState, action) => {
                 : [...state.items[id], action.payload],
             };
 
-
             const items = getArr(newItems);
-            const allPizzas = getArr(items)
-            const allPizzasTotalPrice = getTotalPrice(allPizzas);
+            const allPizzasTotalPrice = getTotalPrice(items);
             return {
                 ...state,
-                items: {
-                    ...state.items,
-                    [id]: !state.items[id]  
-                    ? [action.payload] 
-                    : [...state.items[id], action.payload],
-                },
+                items: newItems,
                 totalPrice: allPizzasTotalPrice,
-                totalCount: allPizzas.length
+                totalCount: items.length
             }
         };
 
-        
         case 'PLUS_ITEM': {
             const funcPlus = {
                 ...state.items,
               };
               funcPlus[action.payload].push(funcPlus[action.payload][0]);
-              
               const arr = getArr(funcPlus);
-            
             return {
                 ...state,
                 items: funcPlus,
                 totalPrice: getTotalPrice(arr),
                 totalCount: arr.length
-
             }
         };
 

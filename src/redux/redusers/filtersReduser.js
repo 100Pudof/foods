@@ -1,5 +1,6 @@
 const initialState = {
     sortBy: {
+        name: '',
         type: 'price',
         order: 'desc',
     },

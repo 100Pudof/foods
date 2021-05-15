@@ -7,7 +7,7 @@
         "types": ["40 г","80 г"],
         "price": [30, 50],
         "category": 4,
-        "rating": 2
+        "popular": 7
       },
       {
         "id": 2,
@@ -16,7 +16,7 @@
         "types": ["40 г","80 г"],
         "price": [30, 50],
         "category": 4,
-        "rating": 2
+        "popular": 2
       },
       {
         "id": 3,
@@ -25,7 +25,7 @@
         "types": ["40 г","80 г"],
         "price": [30, 50],
         "category": 4,
-        "rating": 6
+        "popular": 6
       },
       {
         "id": 4,
@@ -34,7 +34,7 @@
         "types": ["0.5 л.","1 л."],
         "price": [80, 150],
         "category": 3,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 5,
@@ -43,7 +43,7 @@
         "types": ["0.5 л.","1 л."],
         "price": [60, 110],
         "category": 3,
-        "rating": 6
+        "popular": 6
       },
       {
         "id": 6,
@@ -52,7 +52,7 @@
         "types": ["0.5 л.","1 л."],
         "price": [60, 110],
         "category": 3,
-        "rating": 3
+        "popular": 3
       },
       {
         "id": 7,
@@ -61,7 +61,7 @@
         "types": ["170 грамм"],
         "price": [165],
         "category": 2,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 8,
@@ -70,7 +70,7 @@
         "types": ["170 грамм"],
         "price": [165],
         "category": 2,
-        "rating": 4
+        "popular": 4
       },
       {
         "id": 27,
@@ -79,7 +79,7 @@
         "types": ["105 грамм"],
         "price": [189],
         "category": 2,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 28,
@@ -88,7 +88,7 @@
         "types": ["120 грамм"],
         "price": [190],
         "category": 2,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 9,
@@ -97,7 +97,7 @@
         "types": ["105 грамм","210 грамм"],
         "price": [175, 250],
         "category": 1,
-        "rating": 6
+        "popular": 6
       },
       {
         "id": 29,
@@ -106,7 +106,7 @@
         "types": ["105 грамм","210 грамм"],
         "price": [175, 250],
         "category": 1,
-        "rating": 6
+        "popular": 6
       },
       {
         "id": 10,
@@ -115,7 +115,7 @@
         "types": ["105 грамм","210 грамм"],
         "price": [175, 250],
         "category": 1,
-        "rating": 7
+        "popular": 7
       },
       {
         "id": 11,
@@ -124,7 +124,7 @@
         "types": ["105 грамм","210 грамм"],
         "price": [135, 210],
         "category": 1,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 12,
@@ -133,7 +133,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [365, 399],
         "category": 0,
-        "rating": 7
+        "popular": 7
       },
       {
         "id": 13,
@@ -142,7 +142,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [335, 400],
         "category": 0,
-        "rating": 7
+        "popular": 7
       },
       {
         "id": 14,
@@ -151,7 +151,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [265, 300],
         "category": 0,
-        "rating": 7
+        "popular": 7
       },
       {
         "id": 15,
@@ -160,7 +160,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [255, 290],
         "category": 0,
-        "rating": 7
+        "popular": 7
       },
       {
         "id": 16,
@@ -169,7 +169,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [255, 280],
         "category": 0,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 17,
@@ -178,7 +178,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [245, 280],
         "category": 0,
-        "rating": 5
+        "popular": 5
       },
       {
         "id": 18,
@@ -187,7 +187,7 @@
         "types": ["Обычный", "Запеченый" ],
         "price": [255, 275],
         "category": 0,
-        "rating": 7
+        "popular": 7
       }
     ]
   }

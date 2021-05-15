@@ -10,7 +10,7 @@ import { addToCart } from './../redux/action/cart';
 
 const sortItems = [
   { name: 'цена', type: 'price', order: 'desc' },
-  { name: 'популярности', type: 'pupular', order: 'desc' },
+  { name: 'популярности', type: 'popular', order: 'desc' },
   { name: 'алфавит', type: 'name', order: 'asc' }
 ];
 
@@ -27,9 +27,7 @@ const  Home = React.memo(() => {
   const isLoaded = useSelector(({ items }) => items.isLoaded)
   const category = useSelector(({ filters }) => filters.category);
   const sortBy = useSelector(({ filters }) => filters.sortBy)
-
  
-
   const setCategoryIndex = React.useCallback((index) => {
     dispatch(setCategory(index));
   }, [dispatch]);
@@ -38,10 +36,6 @@ const  Home = React.memo(() => {
     dispatch(setSortBy(type));
   }, [dispatch]);
 
-  // const onSelectSize = React.useCallback((size) => {
-  //   dispatch(setSize(size))
-  // }, [dispatch]);
-
   const handleAddToCart = React.useCallback((obj) => {
     dispatch(addToCart(obj));
   }, [dispatch]);
@@ -49,8 +43,9 @@ const  Home = React.memo(() => {
  React.useEffect(() => {
     dispatch(fetchAllItems(sortBy, category));
   }, [sortBy, category, dispatch]);
+
+  
   return (
-    <div>
 
       <div className="container">
         <div className="content__top">
@@ -74,15 +69,14 @@ const  Home = React.memo(() => {
                 key={elem.id}
                 {...elem}
                 categoryTypes={elem.types}
-                // addedCount={cartItems[elem.id] && cartItems[elem.id].items.length}
+                //addedCount={cartItems[elem.id] && cartItems[elem.id].items.length}
               />))
             : Array(4).fill(0).map((_, index) => <LoadingBlock key={index} />)
           }
-
+  
 
         </div>
       </div>
-    </div>
   )
 }
 );
